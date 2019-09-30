@@ -1,0 +1,544 @@
+.container {
+    max-width: auto;
+    
+}
+
+////////////////////
+/// NAVIGATION
+
+.navigation {
+
+    &__checkbox {
+        display: none;
+
+    }
+
+    &__button {
+        // display: none;
+        background-color: transparent;
+        height: 5rem;
+        width: 5rem;
+        position: fixed;
+        top: 3rem;
+        right: 3rem;
+        border-radius: 50%;
+        z-index: 200;
+        text-align: center;
+        cursor: pointer;
+
+    }
+
+    
+
+    &__background {
+        height: 5rem;
+        width: 5rem;
+        position: fixed;
+        top: 3rem;
+        right: 3rem;
+        border-radius: 50%;
+        z-index: 100;
+        background-color: transparent;
+        // background-image: radial-gradient(var(--color-blue), var(--color-green));
+        transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+
+    }
+
+    &__nav {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 150;
+        opacity: 0;
+        width: 0;
+        transition: all .8s;
+        //cubic-bezier(0.68, -0.55, 0.265, 1.55)
+
+    }
+
+    &__item {
+        margin: 2rem;
+
+    }
+
+    &__list {
+        position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       text-align: center;
+       width: 100%;
+       list-style: none;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+    }
+
+    &__link {
+
+        &:link,
+        &:visited {
+            display: inline-block;
+            font-size: 3rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: var(--color-white);
+
+        }
+
+        &:hover,
+        &:active {
+            color: var(--color-primary);
+        }
+
+    }
+
+    //BACKGROUND BLUR
+    &__checkbox:checked ~ &__background {
+        transform: scale(80);
+        background-color: var(--color-blue);
+       
+    }
+
+    &__checkbox:checked ~ &__nav {
+        opacity: 1;
+        width: 100%;
+    }
+
+
+    // ICON MENU BURGER
+    &__icon {
+        position: relative;
+        margin-top: 2.5rem;
+
+        &,
+        &::before,
+        &::after {
+            width: 2.5rem;
+            height: 2px;
+            background-color: var(--color-primary);
+            display: inline-block;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all .2s;
+
+        }
+
+        &::before{
+            top: -.8rem;
+        }
+
+        &::after {
+            top: .8rem;
+        }
+
+
+    }
+
+    &__button:hover &__icon::before {
+        top: -1rem;
+
+    }
+
+    &__button:hover &__icon::after {
+        top: 1rem;
+
+    }
+
+    // ANIMATION MENU BURGER EN CROIX
+    &__checkbox:checked + &__button &__icon {
+        background-color: transparent;
+    }
+
+    &__checkbox:checked + &__button &__icon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    &__checkbox:checked + &__button &__icon::after {
+        top : 0;
+        transform: rotate(-135deg);
+    }
+
+
+}
+
+////////////////////
+/// HEADER
+
+.section-intro {
+    background-color: rgba(255, 255, 255, 0.7);
+    // background-image: url(/app/css/img/landingpage_section-ecole.jpg);
+    background-image: url(/yoga/app/css/img/landingpage_section-ecole-small.jpg);
+    @media (min-resolution: 192dpi) and (min-width: 27.5em), (min-width: 125em),
+           (-webkit-min-device-pixel-ratio: 2) and (min-width: 27.5em), (min-width: 125em) { 
+        background-image: url(/yoga/app/css/img/landingpage_section-ecole-small.jpg);
+    }
+    background-blend-mode: screen;
+    background-size: cover;
+    background-position: bottom 75% right 50%;
+    width: 100%;
+    z-index: -1;
+    height: 80vh;
+    padding: 4rem;
+    display: flex;
+
+    @include respond(tab-port) { 
+        height: 60vh;  
+    }
+
+    @include respond(phone) { 
+        height: 45vh;
+    }
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        text-align: center;
+        margin-top: 4rem;
+
+        @include respond(tab-port) { 
+            width: 100%;
+            
+        }
+
+    }
+
+
+    &__heading-primary {
+        @include heading-primary;
+    }
+
+    &__paragraph {
+        font-size: 1.5rem;
+        color: var(--color-primary);
+        text-align: center;
+        margin: 1.5rem 0;
+        
+
+    }
+
+}
+
+////////////////////
+/// LOGO
+
+.logo {
+    height: 6rem;
+
+    @include respond(phone) { 
+        height: 5rem; 
+    }
+}
+
+
+////////////////////
+/// COURS
+
+.section-course {
+    padding: 5rem;
+    display: flex;
+    align-items: center;
+    
+    height: 50vh;
+
+    @include respond(tab-port) { 
+        padding: 3rem;
+        height: 40vh; 
+    }
+
+    @include respond(phone) { 
+        padding: 2rem;
+        height: 30vh; 
+    }
+
+    
+
+} 
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+   
+
+    &__heading-primary {
+        @include heading-primary;
+        
+
+    }
+
+    &__paragraph {
+        @include paragraph;
+    }
+
+}
+
+.calendar{
+    width: 50%;
+    text-align: center;
+    
+}
+
+////////////////////
+/// BLOG
+
+.section-blog {
+    background-color: rgba(255, 255, 255, 0.8);
+    // background-image: url(/app/css/img/landingpage_section-blog.jpg);
+    background-image: url(/yoga/app/css/img/landingpage_section-blog.jpg);
+
+    // RESPONSIVE IMAGE EN CSS
+    @media (min-resolution: 192dpi) and (min-width: 27.5em), (min-width: 125em),
+           (-webkit-min-device-pixel-ratio: 2) and (min-width: 27.5em), (min-width: 125em) { 
+        background-image: url(/yoga/app/css/img/landingpage_section-blog_small.jpg);
+    }
+    background-blend-mode: screen;
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    padding: 5rem;
+    display: flex;
+
+    @include respond(tab-port) { 
+        padding: 3rem;
+        height: 50vh;  
+    }
+
+    @include respond(phone) { 
+        padding: 2rem;
+        height: 40vh; 
+    }
+
+    &__empty {
+        width: 50%;
+        order: 1;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; 
+        order: -1;
+        width: 50%;
+        padding-top: 5rem;
+
+    }
+
+    &__heading-primary {
+        @include heading-primary;
+
+    }
+
+    &__paragraph {
+        @include paragraph;
+    }
+
+
+}
+
+////////////////////
+/// PRACTICE
+
+.section-practice {
+    // height: 90vh;
+    min-height: auto;
+    padding: 5rem;
+
+    @include respond(tab-port) { 
+        padding: 3rem 3rem 4rem 3rem;
+        height: auto;
+    }
+    
+    &__heading {
+        margin-bottom: 5rem;
+
+        @include respond(tab-port) { 
+            margin-bottom: 3.5rem;
+        }
+    
+    }
+
+    &__heading-secondary {
+        @include heading-secondary;
+
+    }
+
+    &__paragraph-secondary {
+        @include paragraph-secondary;
+
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: space-evenly;
+
+        @include respond(small-phone) { 
+            flex-direction: column;
+           justify-content: space-evenly;
+           align-items: center;
+        }
+
+    }
+
+
+    
+}
+
+////////////////////
+/// FOOTER
+
+.footer-container {
+    background-color: var(--color-primary);
+    height: 50vh;
+    padding: 5rem;
+
+    @include respond(tab-port) { 
+        padding: 3rem;
+        height: auto;
+    }
+}
+
+.container-top {
+    display: flex;
+    justify-content: space-between;
+    
+    @include respond(small-phone) { 
+        justify-content: space-evenly;
+    }
+
+    &__legal {
+        @include respond(small-phone) { 
+            text-align: center;
+        }
+
+    }
+
+    &__blog {
+        @include respond(small-phone) { 
+            display: none;
+            text-align: center;
+        }
+
+    }
+
+    &__course {
+        @include respond(small-phone) { 
+            display: none;
+        }
+
+    }
+
+    &__practice {
+        @include respond(small-phone) { 
+            display: none;
+        }
+
+    }
+
+    &__contact {
+        @include respond(small-phone) { 
+            text-align: center;
+        }
+
+    }
+
+}
+
+.footer-heading {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--color-white);
+    margin-bottom: 1.5rem;
+
+}
+
+.footer-text {
+    color: var(--color-white);
+    font-size: 1.3rem;
+    margin-bottom: 2.3rem;
+
+}
+
+.footer-heading-secondary {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--color-white);
+    margin-bottom: 1.5rem;
+
+}
+
+.footer-list {
+    &__item {
+        list-style: none;
+        color: var(--color-white);
+        font-size: 1.3rem;
+        
+        &:not(:last-child){
+            margin-bottom: 1.3rem;
+
+        }
+
+    }
+
+    &__link:link,
+    &__link:visited {
+        color: var(--color-white);
+        text-decoration: none;
+        font-size: 1.3rem;
+
+    }
+
+    &__link:hover {
+        color: var(--color-green);
+
+    }
+
+    
+}
+
+.legal-text {
+    margin-top: 5rem;
+    font-size: 1.1rem;
+    color: var(--color-white);
+    display: flex;
+    justify-content: space-between;
+
+    @include respond(small-phone) { 
+        justify-content: space-between;
+        
+        margin-top: 3rem;
+    }
+    
+    
+
+    &__links {
+        
+        &--link:link,
+        &--link:visited {
+            text-decoration: none;
+            color: var(--color-white);
+
+            &:not(:first-child){
+                margin-left: 2rem;
+            }
+        }
+
+        &--link:hover {
+            color: var(--color-green);
+        }
+    }
+    
+}

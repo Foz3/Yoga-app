@@ -1,0 +1,58 @@
+.card {
+    width: 20%;
+    height: 32rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    box-shadow: 0.2rem 0.8rem 1.5rem rgba(117, 89, 89, 0.3);
+
+    @include respond(small-phone) { 
+        width: 75%;
+        height: 22rem;
+        margin-bottom: 3rem;
+    }
+
+    &--img1 {
+        // background-image: url(/app/css/img/landingpage_section-pratiquer_postures.jpg);
+        background-image: url(/yoga/app/css/img/landingpage_section-pratiquer_postures.jpg);
+        @media (min-resolution: 192dpi) and (min-width: 27.5em), (min-width: 125em),
+           (-webkit-min-device-pixel-ratio: 2) and (min-width: 27.5em), (min-width: 125em) { 
+        background-image: url(/yoga/app/css/img/landingpage_section-pratiquer_postures_small.jpg);
+        }   
+        background-size: cover;
+        
+
+    }
+
+    &--img2 {
+        // background-image: url(/app/css/img/landingpage_section-pratiquer_meditation.jpg);
+        background-image: url(/yoga/app/css/img/landingpage_section-pratiquer_meditation.jpg);
+        @media (min-resolution: 192dpi) and (min-width: 27.5em), (min-width: 125em),
+           (-webkit-min-device-pixel-ratio: 2) and (min-width: 27.5em), (min-width: 125em) { 
+        background-image: url(/yoga/app/css/img/landingpage_section-pratiquer_meditation_small.jpg);
+        }   
+        background-size: cover;
+        @include respond(small-phone) { 
+            background-position: center;
+        }
+
+    }
+
+    &--img3 {
+        // background-image: url(/app/css/img/landingpage_section-pratiquer_respiration.jpg);
+        background-image: url(/yoga/app/css/img/landingpage_section-pratiquer_respiration.jpg);
+        @media (min-resolution: 192dpi) and (min-width: 27.5em), (min-width: 125em),
+           (-webkit-min-device-pixel-ratio: 2) and (min-width: 27.5em), (min-width: 125em) { 
+        background-image: url(/yoga/app/css/img/landingpage_section-pratiquer_respiration_small.jpg);
+        }   
+        background-size: cover;
+        
+
+    }
+
+    &__btn {
+        margin-bottom: 2rem;
+    }
+}

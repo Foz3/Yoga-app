@@ -1,0 +1,469 @@
+/*-------------------------
+MEDIA QUERIES
+---------------------------*/
+.btn, .btn:link, .btn:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.5rem;
+  border-radius: 100px;
+  padding: 1.2rem 4rem;
+  transition: all .4s;
+  cursor: pointer; }
+  @media only screen and (max-width: 56.25em) {
+    .btn, .btn:link, .btn:visited {
+      font-size: 1.2rem;
+      padding: 1rem 3.8rem; } }
+
+.btn:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn:active {
+  transform: translateY(0.3rem); }
+
+.btn--gradient {
+  color: var(--color-white);
+  background-image: var(--linear-gradient); }
+
+.btn--white {
+  background-color: var(--color-white);
+  color: var(--color-primary); }
+
+.card {
+  width: 20%;
+  height: 32rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  box-shadow: 0.2rem 0.8rem 1.5rem rgba(117, 89, 89, 0.3); }
+  @media only screen and (max-width: 27.5em) {
+    .card {
+      width: 75%;
+      height: 22rem;
+      margin-bottom: 3rem; } }
+  .card--img1 {
+    background-image: url(/yoga/app/css/img/landingpage_section-pratiquer_postures.jpg);
+    background-size: cover; }
+    @media (min-resolution: 192dpi) and (min-width: 27.5em), (min-width: 125em), (-webkit-min-device-pixel-ratio: 2) and (min-width: 27.5em), (min-width: 125em) {
+      .card--img1 {
+        background-image: url(/yoga/app/css/img/landingpage_section-pratiquer_postures_small.jpg); } }
+  .card--img2 {
+    background-image: url(/yoga/app/css/img/landingpage_section-pratiquer_meditation.jpg);
+    background-size: cover; }
+    @media (min-resolution: 192dpi) and (min-width: 27.5em), (min-width: 125em), (-webkit-min-device-pixel-ratio: 2) and (min-width: 27.5em), (min-width: 125em) {
+      .card--img2 {
+        background-image: url(/yoga/app/css/img/landingpage_section-pratiquer_meditation_small.jpg); } }
+    @media only screen and (max-width: 27.5em) {
+      .card--img2 {
+        background-position: center; } }
+  .card--img3 {
+    background-image: url(/yoga/app/css/img/landingpage_section-pratiquer_respiration.jpg);
+    background-size: cover; }
+    @media (min-resolution: 192dpi) and (min-width: 27.5em), (min-width: 125em), (-webkit-min-device-pixel-ratio: 2) and (min-width: 27.5em), (min-width: 125em) {
+      .card--img3 {
+        background-image: url(/yoga/app/css/img/landingpage_section-pratiquer_respiration_small.jpg); } }
+  .card__btn {
+    margin-bottom: 2rem; }
+
+.calendar__icon-calendar {
+  fill: var(--color-primary);
+  width: 15rem;
+  height: 15rem; }
+  @media only screen and (max-width: 27.5em) {
+    .calendar__icon-calendar {
+      width: 10rem;
+      height: 10rem; } }
+
+.social__icon {
+  height: 2rem;
+  width: 2rem;
+  fill: var(--color-white); }
+  .social__icon:not(:last-child) {
+    margin-right: 1.5rem; }
+
+:root {
+  --color-white: #fff;
+  --color-primary: #7b889d;
+  --color-blue: #a9c9ff;
+  --color-green: #3ce8ad;
+  --color-grey: #636e72;
+  --color-black: #000;
+  --linear-gradient: linear-gradient(to right, var(--color-blue), var(--color-green)); }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  max-height: auto; }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 37.5%; } }
+  @media only screen and (max-width: 27.5em) {
+    html {
+      font-size: 25%; } }
+
+body {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.6; }
+
+.container {
+  max-width: auto; }
+
+.navigation__checkbox {
+  display: none; }
+
+.navigation__button {
+  background-color: transparent;
+  height: 5rem;
+  width: 5rem;
+  position: fixed;
+  top: 3rem;
+  right: 3rem;
+  border-radius: 50%;
+  z-index: 200;
+  text-align: center;
+  cursor: pointer; }
+
+.navigation__background {
+  height: 5rem;
+  width: 5rem;
+  position: fixed;
+  top: 3rem;
+  right: 3rem;
+  border-radius: 50%;
+  z-index: 100;
+  background-color: transparent;
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
+
+.navigation__nav {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 150;
+  opacity: 0;
+  width: 0;
+  transition: all .8s; }
+
+.navigation__item {
+  margin: 2rem; }
+
+.navigation__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  list-style: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.navigation__link:link, .navigation__link:visited {
+  display: inline-block;
+  font-size: 3rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--color-white); }
+
+.navigation__link:hover, .navigation__link:active {
+  color: var(--color-primary); }
+
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(80);
+  background-color: var(--color-blue); }
+
+.navigation__checkbox:checked ~ .navigation__nav {
+  opacity: 1;
+  width: 100%; }
+
+.navigation__icon {
+  position: relative;
+  margin-top: 2.5rem; }
+  .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+    width: 2.5rem;
+    height: 2px;
+    background-color: var(--color-primary);
+    display: inline-block; }
+  .navigation__icon::before, .navigation__icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all .2s; }
+  .navigation__icon::before {
+    top: -.8rem; }
+  .navigation__icon::after {
+    top: .8rem; }
+
+.navigation__button:hover .navigation__icon::before {
+  top: -1rem; }
+
+.navigation__button:hover .navigation__icon::after {
+  top: 1rem; }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon {
+  background-color: transparent; }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+  top: 0;
+  transform: rotate(135deg); }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+  top: 0;
+  transform: rotate(-135deg); }
+
+.section-intro {
+  background-color: rgba(255, 255, 255, 0.7);
+  background-image: url(/yoga/app/css/img/landingpage_section-ecole-small.jpg);
+  background-blend-mode: screen;
+  background-size: cover;
+  background-position: bottom 75% right 50%;
+  width: 100%;
+  z-index: -1;
+  height: 80vh;
+  padding: 4rem;
+  display: flex; }
+  @media (min-resolution: 192dpi) and (min-width: 27.5em), (min-width: 125em), (-webkit-min-device-pixel-ratio: 2) and (min-width: 27.5em), (min-width: 125em) {
+    .section-intro {
+      background-image: url(/yoga/app/css/img/landingpage_section-ecole-small.jpg); } }
+  @media only screen and (max-width: 56.25em) {
+    .section-intro {
+      height: 60vh; } }
+  @media only screen and (max-width: 37.5em) {
+    .section-intro {
+      height: 45vh; } }
+  .section-intro__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    text-align: center;
+    margin-top: 4rem; }
+    @media only screen and (max-width: 56.25em) {
+      .section-intro__container {
+        width: 100%; } }
+  .section-intro__heading-primary {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--color-primary); }
+  .section-intro__paragraph {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    text-align: center;
+    margin: 1.5rem 0; }
+
+.logo {
+  height: 6rem; }
+  @media only screen and (max-width: 37.5em) {
+    .logo {
+      height: 5rem; } }
+
+.section-course {
+  padding: 5rem;
+  display: flex;
+  align-items: center;
+  height: 50vh; }
+  @media only screen and (max-width: 56.25em) {
+    .section-course {
+      padding: 3rem;
+      height: 40vh; } }
+  @media only screen and (max-width: 37.5em) {
+    .section-course {
+      padding: 2rem;
+      height: 30vh; } }
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%; }
+  .text-content__heading-primary {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--color-primary); }
+  .text-content__paragraph {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    text-align: center;
+    margin: 1.5rem 0; }
+
+.calendar {
+  width: 50%;
+  text-align: center; }
+
+.section-blog {
+  background-color: rgba(255, 255, 255, 0.8);
+  background-image: url(/yoga/app/css/img/landingpage_section-blog.jpg);
+  background-blend-mode: screen;
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  padding: 5rem;
+  display: flex; }
+  @media (min-resolution: 192dpi) and (min-width: 27.5em), (min-width: 125em), (-webkit-min-device-pixel-ratio: 2) and (min-width: 27.5em), (min-width: 125em) {
+    .section-blog {
+      background-image: url(/yoga/app/css/img/landingpage_section-blog_small.jpg); } }
+  @media only screen and (max-width: 56.25em) {
+    .section-blog {
+      padding: 3rem;
+      height: 50vh; } }
+  @media only screen and (max-width: 37.5em) {
+    .section-blog {
+      padding: 2rem;
+      height: 40vh; } }
+  .section-blog__empty {
+    width: 50%;
+    order: 1; }
+  .section-blog__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    order: -1;
+    width: 50%;
+    padding-top: 5rem; }
+  .section-blog__heading-primary {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--color-primary); }
+  .section-blog__paragraph {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    text-align: center;
+    margin: 1.5rem 0; }
+
+.section-practice {
+  min-height: auto;
+  padding: 5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .section-practice {
+      padding: 3rem 3rem 4rem 3rem;
+      height: auto; } }
+  .section-practice__heading {
+    margin-bottom: 5rem; }
+    @media only screen and (max-width: 56.25em) {
+      .section-practice__heading {
+        margin-bottom: 3.5rem; } }
+  .section-practice__heading-secondary {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--color-primary); }
+  .section-practice__paragraph-secondary {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    margin: 1.5rem 0; }
+  .section-practice__cards {
+    display: flex;
+    justify-content: space-evenly; }
+    @media only screen and (max-width: 27.5em) {
+      .section-practice__cards {
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center; } }
+
+.footer-container {
+  background-color: var(--color-primary);
+  height: 50vh;
+  padding: 5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .footer-container {
+      padding: 3rem;
+      height: auto; } }
+
+.container-top {
+  display: flex;
+  justify-content: space-between; }
+  @media only screen and (max-width: 27.5em) {
+    .container-top {
+      justify-content: space-evenly; } }
+  @media only screen and (max-width: 27.5em) {
+    .container-top__legal {
+      text-align: center; } }
+  @media only screen and (max-width: 27.5em) {
+    .container-top__blog {
+      display: none;
+      text-align: center; } }
+  @media only screen and (max-width: 27.5em) {
+    .container-top__course {
+      display: none; } }
+  @media only screen and (max-width: 27.5em) {
+    .container-top__practice {
+      display: none; } }
+  @media only screen and (max-width: 27.5em) {
+    .container-top__contact {
+      text-align: center; } }
+
+.footer-heading {
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--color-white);
+  margin-bottom: 1.5rem; }
+
+.footer-text {
+  color: var(--color-white);
+  font-size: 1.3rem;
+  margin-bottom: 2.3rem; }
+
+.footer-heading-secondary {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--color-white);
+  margin-bottom: 1.5rem; }
+
+.footer-list__item {
+  list-style: none;
+  color: var(--color-white);
+  font-size: 1.3rem; }
+  .footer-list__item:not(:last-child) {
+    margin-bottom: 1.3rem; }
+
+.footer-list__link:link, .footer-list__link:visited {
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 1.3rem; }
+
+.footer-list__link:hover {
+  color: var(--color-green); }
+
+.legal-text {
+  margin-top: 5rem;
+  font-size: 1.1rem;
+  color: var(--color-white);
+  display: flex;
+  justify-content: space-between; }
+  @media only screen and (max-width: 27.5em) {
+    .legal-text {
+      justify-content: space-between;
+      margin-top: 3rem; } }
+  .legal-text__links--link:link, .legal-text__links--link:visited {
+    text-decoration: none;
+    color: var(--color-white); }
+    .legal-text__links--link:link:not(:first-child), .legal-text__links--link:visited:not(:first-child) {
+      margin-left: 2rem; }
+  .legal-text__links--link:hover {
+    color: var(--color-green); }

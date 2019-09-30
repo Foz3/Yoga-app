@@ -1,0 +1,31 @@
+////////////////////
+/// COURS SECTION
+
+.calendar{
+    &__icon-calendar {
+        fill: var(--color-primary);
+        width: 15rem;
+        height: 15rem;
+        
+        @include respond(small-phone) { 
+            width: 10rem;
+            height: 10rem;
+        }
+    }
+}
+
+////////////////////
+/// FOOTER SECTION
+
+.social{
+
+    &__icon {
+        height: 2rem;
+        width: 2rem;
+        fill: var(--color-white);
+        &:not(:last-child){
+            margin-right: 1.5rem;
+
+        }
+    }
+}

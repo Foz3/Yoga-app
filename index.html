@@ -4,10 +4,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/app/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="app/css/img/favicon-yoga.png">
+    <link rel="stylesheet" href="app/css/style.css">
     <title>Satanama Yoga</title>
 </head>
 <body>
-    Bonjour
+    <div class="container">
+        <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+            <label for="navi-toggle" class="navigation__button">
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
+    
+            <div class="navigation__background">&nbsp;</div>
+
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#" class="navigation__link">L'école</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Cours</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Blog</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Pratiquer</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <header class="section-intro">
+            <img src="app/css/img/satanamayoga_logo.png" alt="Satanama Logo" class="logo">
+            <div class="section-intro__container">
+                <h1 class="section-intro__heading-primary heading-primary--grey">Satanama Yoga</h1>
+                <p class="section-intro__paragraph">Bienvenu sur le site de l'école Satanama Yoga ! C'est ici que vous pouvez directement réserver vos cours en ligne.</p>
+                <a href="#" class="section-intro__link btn btn--gradient">En savoir plus</a>
+            </div>
+        </header>
+
+        <div class="section-course">
+            <div class="calendar">
+                <svg class="calendar__icon-calendar">
+                    <use xlink:href="app/css/img/sprites.svg#icon-calendar"></use>
+                </svg>
+            </div>
+            <div class="text-content">
+                <h1 class="text-content__heading-primary heading-primary--white">Nos prochains cours</h1>
+                <p class="text-content__paragraph --white">Vous pouvez désormais vous inscrire en ligne avec notre calendrier partagé. Ne ratez plus aucun cous de votre école.</p>
+                <a href="#" class="text-content__link btn btn--gradient">Reserver</a>
+            </div>
+        </div>
+
+        <div class="section-blog">
+            <div class="section-blog__empty">
+                &nbsp; 
+            </div>
+            <div class="section-blog__content">
+                <h1 class="section-blog__heading-primary heading-primary--white">Notre actualité</h1>
+                <p class="section-blog__paragraph --white">Suivez l'actualité de l'école Satanama sur notre blog.</p>
+                <a href="#" class="section-blog__link btn btn--gradient">En lire plus</a>
+            </div>
+        </div>
+        <div class="section-practice">
+            <div class="section-practice__heading">
+                <h1 class="section-practice__heading-secondary heading-primary--white">Pratiquer le yoga</h1>
+                <p class="section-practice__paragraph-secondary">Initiez vous au diverse pratique du yoga grâce à nos fiches conseils.<br>Un bon premier point d'entrée dans la pratique.</p>
+            </div>
+            <div class="section-practice__cards">
+                <div class="card card--img1">
+                    <a href="#" class="card__btn btn btn--white">Postures</a>
+                </div>
+                <div class="card card--img2">
+                    <a href="#" class="card__btn btn btn--white">Meditation</a>
+                </div>
+                <div class="card card--img3">
+                    <a href="#" class="card__btn btn btn--white">Respiration</a>
+                </div>
+            </div>
+        </div>
+        <footer class="footer-container">
+            <div class="container-top">
+                <div class="container-top__legal">
+                    <h3 class="footer-heading">Satanama Yoga</h3>
+                    <p class="footer-text">Apprenez le yoga dans les meilleures conditions.<br>Namaste.</p>
+                    <div class="social">
+                        <svg class="social__icon">
+                            <a href="#" class="social__icon"><use xlink:href="app/css/img/sprites.svg#icon-facebook2"></use></a>
+                        </svg>
+                        <svg class="social__icon">
+                            <a href="#" class="social__icon"><use xlink:href="app/css/img/sprites.svg#icon-instagram"></use></a>
+                        </svg>
+                        <svg class="social__icon">
+                            <a href="#" class="social__icon"><use xlink:href="app/css/img/sprites.svg#icon-twitter"></use></a>
+                        </svg>
+                        <svg class="social__icon">
+                            <a href="#" class="social__icon"><use xlink:href="app/css/img/sprites.svg#icon-youtube"></use></a>
+                        </svg>
+                    </div>
+                </div>
+                <div class="container-top__blog">
+                    <h3 class="footer-heading-secondary">Blog</h3>
+                    <ul class="footer-list">
+                        <li class="footer-list__item"><a class="footer-list__link" href="#">Voyages</a></li>
+                        <li class="footer-list__item"><a class="footer-list__link" href="#">Yoga thérapie</a></li>
+                        <li class="footer-list__item"><a class="footer-list__link" href="#">Méditation</a></li>
+                        <li class="footer-list__item"><a class="footer-list__link" href="#">Alimentation</a></li>
+                        <li class="footer-list__item"><a class="footer-list__link" href="#">Respiration</a></li>
+                    </ul>
+                </div>
+                <div class="container-top__course">
+                    <h3 class="footer-heading-secondary">Cours</h3>
+                    <ul class="footer-list">
+                        <li class="footer-list__item"><a class="footer-list__link" href="#">Réserver</a></li>
+                        <li class="footer-list__item"><a class="footer-list__link" href="#">Consulter le calendrier</a></li>
+                    </ul>
+                </div>
+                <div class="container-top__practice">
+                    <h3 class="footer-heading-secondary">Pratiquer</h3>
+                    <ul class="footer-list">
+                        <li class="footer-list__item"><a class="footer-list__link" href="#">Postures</a></li>
+                        <li class="footer-list__item"><a class="footer-list__link" href="#">Meditation</a></li>
+                        <li class="footer-list__item"><a class="footer-list__link" href="#">Respiration</a></li>
+                    </ul>
+                </div>
+                <div class="container-top__contact">
+                    <h3 class="footer-heading-secondary">Nous contacter</h3>
+                    <ul class="footer-list">
+                        <li class="footer-list__item">Satanama Yoga</li>
+                        <li class="footer-list__item"><a class="footer-list__link" href="callto:+33123456789">+33 123456789</a></li>
+                        <li class="footer-list__item"><a class="footer-list__link" href="mailto:hello@floriandev.com">satanamayoga@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="legal-text">
+                <p class="legal-text__copyright">&copy; 2019 Satanama - Build with respect of all the Mantras.</p>
+                <div class="legal-text__links">
+                    <a class="legal-text__links--link" href="#">Contact</a>
+                    <a class="legal-text__links--link" href="#">Conditions</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
 </body>
 </html>

@@ -1,0 +1,54 @@
+:root {
+
+    --color-white: #fff;
+    --color-primary: #7b889d;
+    --color-blue: #a9c9ff;
+    --color-green: #3ce8ad;
+
+    --color-grey: #636e72;
+    --color-black: #000;
+
+    --linear-gradient: linear-gradient(to right, var(--color-blue), var(--color-green));
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    
+    font-size: 62.5%;
+    max-height: auto;
+
+    @include respond(tab-port) { 
+        font-size: 50%; 
+    }
+
+    @include respond(phone) { 
+        font-size: 37.5%; 
+    }
+    
+    @include respond(small-phone) { 
+        font-size: 25%; 
+        
+    }
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    
+
+    
+
+}
